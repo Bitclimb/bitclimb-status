@@ -109,7 +109,7 @@ $(() => {
   function addIssues (obj) {
     $('ul.issues').append(`<li>
       <div class="txt-bold issues-date">${obj.created}</div>
-      <div class="issues-title">[${obj.label.toString()}] ${obj.title}</div>
+      <div class="issues-title">[${obj.label[0].name}] ${obj.title}</div>
       <div class="issues-body"><span class="txt-bold">Details: </span>${obj.body}</div>
       <div class="issues-body"><span class="txt-bold">Status: </span><span class="label-${obj.state}">${obj.state}</span></div>
       </li>`);
