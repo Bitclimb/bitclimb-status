@@ -1,0 +1,42 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Bitclimb Status</title>
+  <meta name="description" content="Service status for Bitclimb services">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/roboto/roboto-fontface.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/milligram.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body>
+  <div id="header">
+    <h1>Bitclimb System Status</h1>
+  </div>
+  <div class="wrapper">
+    <div class="loader">
+      <div class="spinner"></div>
+      <span class="spinner-txt">Loading Services</span>
+    </div>
+    <div class="cat-titles-services">
+      <span class="cat-titles">Services</span>
+      <span class="updatetime updatetime-services"></span>
+    </div>
+    <ul class="services">
+    </ul>
+    <div class="cat-titles-issues">
+      <span class="cat-titles">Issues</span>
+      <span class="updatetime updatetime-issues"></span>
+    </div>
+    <ul class="issues"></ul>
+  </div>
+  <div id="modals">
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/highcharts.js"></script>
+  <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>
