@@ -138,14 +138,16 @@ $(() => {
     $('.cat-titles-issues').show();
     $('.updatetime-issues').text(`Updated ${moment(parseInt(localStorage.getItem('lastupdate'))).fromNow()}`);
     for (const v of Object.values(data)) {
-      const obj = {
-        label: v.labels,
-        title: v.title,
-        body: v.body,
-        state: v.state,
-        created: moment(v.created_at).format('MMM D, YYYY')
-      };
-      addIssues(obj);
+      if(v.labels.length > 0){
+        const obj = {
+          label: v.labels,
+          title: v.title,
+          body: v.body,
+          state: v.state,
+          created: moment(v.created_at).format('MMM D, YYYY')
+        };
+        addIssues(obj);
+      }
     }
   }
 
