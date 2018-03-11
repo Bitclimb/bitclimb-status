@@ -266,3 +266,6 @@ span.tooltip:hover::before {
  line-height: 40px;
  color: #717171;
 }
+.updtime{
+   padding-left: 5px;
+}

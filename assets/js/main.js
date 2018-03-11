@@ -136,7 +136,7 @@ $(() => {
 
   function issuesParse (data) {
     $('.cat-titles-issues').show();
-    $('.updatetime-issues').text(`Updated ${moment(parseInt(localStorage.getItem('lastupdate'))).fromNow()}`);
+    $('.updatetime-issues .updtime').text(`Updated ${moment(parseInt(localStorage.getItem('lastupdate'))).fromNow()}`);
     for (const v of Object.values(data)) {
       if(v.labels.length > 0){
         const obj = {
@@ -154,7 +154,7 @@ $(() => {
   function statsParse (data) {
     $('.loader').hide();
     $('.cat-titles-services').show();
-    $('.updatetime-services').text(`Updated ${moment(parseInt(localStorage.getItem('lastupdate'))).fromNow()}`);
+    $('.updatetime-services .updtime').text(`Updated ${moment(parseInt(localStorage.getItem('lastupdate'))).fromNow()}`);
     for (const v of Object.values(data)) {
       const obj = {};
       obj.name = v.name;
@@ -194,4 +194,8 @@ $(() => {
   }
   getStats();
   getIssues();
+  $('.updatetime a').on('click',function(){
+    localStorage.clear();
+    location.reload()
+  })
 });
